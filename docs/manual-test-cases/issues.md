@@ -10,7 +10,7 @@
 | 1 | Open `test-repo` → **Issues** tab → **New Issue** | The new issue form is displayed |
 | 2 | Enter the title `Test issue` and a short description, then click **Create Issue** | The new issue page is displayed with the title and an issue number (e.g. `#1`) |
 
-**Result:** Not executed, **Date:** -, **Bug ID:** -
+**Result:** Pass, **Date:** 2026-11-12, **Bug ID:** -
 
 ## TC-09: View an issue and add a comment
 
@@ -35,4 +35,4 @@
 | 1 | Open `test-repo` → **Issues** → **New Issue** | The new issue form is displayed |
 | 2 | Leave the title empty, write a description and click **Create Issue** | An error message is shown and no issue is created |
 
-**Result:** Not executed, **Date:** -, **Bug ID:** -
+**Result:** Pass, **Date:** 2026-11-12, **Bug ID:** -
