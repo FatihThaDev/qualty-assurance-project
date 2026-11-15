@@ -99,6 +99,64 @@ curl -s http://localhost:3000/api/v1/version
 curl -s http://localhost:3000/api/healthz  # if enabled
 ```
 
+
+## Unit Tests
+---
+
+The project uses [Vitest](https://vitest.dev/) for unit tests. The tests live in the `@/app/tests/` folder of the BioStock project and are configured in `vitest.config.ts`.
+
+- **Framework:** Vitest
+- **Test files:** 2
+- **Total tests:** 14
+- **Business-logic tests:** 10
+- **Component tests:** 4
+- **External services:** not used
+- **Mocks:** none for external dependencies; `vi.fn()` is used only for callback props
+
+## How to run
+
+```bash
+npm test
+```
+
+Run with coverage:
+
+```bash
+npm run test:coverage
+```
+
+Coverage is printed in the terminal and written to the `coverage/` folder.
+
+## Coverage
+
+Latest report:
+
+------------------------------|---------|----------|---------|---------|-------------------
+File                          | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s 
+------------------------------|---------|----------|---------|---------|-------------------
+All files                     |     100 |      100 |     100 |     100 |                   
+ app/components/floatinginput |     100 |      100 |     100 |     100 |                   
+  floatinginput.tsx           |     100 |      100 |     100 |     100 |                   
+ lib                          |     100 |      100 |     100 |     100 |                   
+  schemas.ts                  |     100 |      100 |     100 |     100 |                   
+------------------------------|---------|----------|---------|---------|-------------------
+
+### What coverage tells us
+
+Every statement, branch, and function in the tested files is executed by the tests. The validation rules and the search and input behaviour are covered.
+
+### What coverage does not tell us
+
+Coverage does not prove that the assertions are meaningful or that code is correct. It does not cover:
+
+- MongoDB models,
+- live TheMealDB responses,
+- the visual layout or accessibility.
+
+A high coverage number is not a replacement for code review or integration/end-to-end testing.
+
+Project that unit tests are performed on is [`BioStock`](https://github.com/FatihTheDev/biostock)
+
 ## How to Contribute
 
 1. **Fork & branch** - Fork this repo and create a branch: `git checkout -b your-branch-name`

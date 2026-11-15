@@ -21,7 +21,7 @@
 | Test Level | Tool | Purpose |
 |---|---|---|
 | Manual | Markdown test cases | Core functionality checks |
-| API | Postman/REST calls | Test Gitea REST API endpoints |
+| API | Playwright | Test Gitea REST API endpoints |
 | E2E/UI | Playwright (TypeScript) | Test user flows through browser |
 | Unit | Previous project's repo (linked in README) | Isolated component tests |
 
