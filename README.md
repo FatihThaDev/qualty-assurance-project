@@ -103,23 +103,29 @@ curl -s http://localhost:3000/api/healthz  # if enabled
 ## Unit Tests
 ---
 
-The project uses [Vitest](https://vitest.dev/) for unit tests. The tests live in the `@/app/tests/` folder of the BioStock project and are configured in `vitest.config.ts`.
+BioStock uses [Vitest](https://vitest.dev/) for unit tests. The tests live in the `@/app/tests/` folder and are configured in `vitest.config.ts`.
 
 - **Framework:** Vitest
 - **Test files:** 2
 - **Total tests:** 14
-- **Business-logic tests:** 10
-- **Component tests:** 4
 - **External services:** not used
 - **Mocks:** none for external dependencies; `vi.fn()` is used only for callback props
 
 ## How to run
 
+- Install vitest and other unit testing dependancies in root project folder (of BioStock, not this one):
+
+```bash
+npm install -D vitest @testing-library/react @testing-library/jest-dom @testing-library/user-event jsdom
+```
+
+- Run tests:
+
 ```bash
 npm test
 ```
 
-Run with coverage:
+- Run with coverage:
 
 ```bash
 npm run test:coverage
@@ -147,11 +153,11 @@ Every statement, branch, and function in the tested files is executed by the tes
 
 ### What coverage does not tell us
 
-Coverage does not prove that the assertions are meaningful or that code is correct. It does not cover:
+Coverage does not prove that the assertions are meaningful, that code is correct and that all files in the project are tested. It does not cover:
 
 - MongoDB models,
 - live TheMealDB responses,
-- the visual layout or accessibility.
+- the visual layout and accessibility.
 
 A high coverage number is not a replacement for code review or integration/end-to-end testing.
 

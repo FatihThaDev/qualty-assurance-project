@@ -23,7 +23,7 @@
 | Manual | Markdown test cases | Core functionality checks |
 | API | Playwright | Test Gitea REST API endpoints |
 | E2E/UI | Playwright (TypeScript) | Test user flows through browser |
-| Unit | Previous project's repo (linked in README) | Isolated component tests |
+| Unit | BioStock repo (linked in README) | Isolated component tests |
 
 ## Test Data and Environment
 
